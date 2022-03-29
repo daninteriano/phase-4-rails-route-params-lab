@@ -4,5 +4,8 @@ class StudentsController < ApplicationController
     students = Student.all
     render json: students
   end
-
+  def show
+    goods = Student.find(params[:id])
+    render json: goods
+  end
 end
